@@ -17,7 +17,7 @@
 						<h3>{{post.title}}</h3>
 						<p>{{post.introduction}}</p>
 						<a href="#" class="btn btn-primary">Lire la suite</a>
-						<a href="#" class="js-like-link btn btn-link">
+						<a href="{{ path('post_like', {'id': post.id}) }}" class="js-like-link btn btn-link">
 							{% if app.user and post.isLikedByUser(app.user) %}
 							<i class="fas fa-thumbs-up"></i>
 							{% else %}
